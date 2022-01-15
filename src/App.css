@@ -1,404 +1,404 @@
 :root{
---Lime-Green: hsl(163, 72%, 41%);
---Bright-Red: hsl(356, 69%, 56%);
-
---Facebook: hsl(208, 92%, 53%);
---Twitter: hsl(203, 89%, 53%);
---Instagram:hsl(37, 97%, 70%),hsl(329, 70%, 58%);
---YouTube: hsl(348, 97%, 39%);
-
---Toggle-Dark:hsl(210, 78%, 56%),hsl(146, 68%, 55%);
---Toggle: hsl(230, 22%, 74%);
-
---BG-DarkM: hsl(230, 17%, 14%);
---Top-BG-Pattern-DarkM: hsl(232, 19%, 15%);
---Card-BG-DarkM: hsl(228, 28%, 20%);
---Text-DarkM: hsl(228, 34%, 66%);
---Other-Text-DarkM: hsl(0, 0%, 100%);
-
---BG-LightM: hsl(0, 0%, 100%);
---Top-BG-Pattern-LightM: hsl(225, 100%, 98%);
---Card-BG-LightM: hsl(227, 47%, 96%);
---Text-LightM: hsl(228, 12%, 44%);
---Other-Text-LightM: hsl(230, 17%, 14%);
-}
-
-.attribution { font-size: 11px; text-align: center; }
-.attribution.dark-mode{color: var(--Text-DarkM);}
-.attribution a { color: hsl(228, 45%, 44%); text-decoration: none;}
-.attribution.dark-mode a{ color: var(--Other-Text-DarkM);}
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body{
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-}
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 24px;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--Toggle);
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:hover{
-  background-image: linear-gradient(52deg,var(--Toggle-Dark));
-
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 18px;
-  width: 18px;
-  right: 5px;
-  bottom: 3px;
-  background-color: var(--Top-BG-Pattern-LightM);
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider.round.dark-mode:before{
-  background-color: var(--Top-BG-Pattern-DarkM);
-}
-
-input:checked + .slider {
-  background-image: linear-gradient(52deg,var(--Toggle-Dark));
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(-24px);
-  -ms-transform: translateX(-24px);
-  transform: translateX(-24px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
-.dashboard{
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: var(--BG-LightM);
-  position: relative;
-}
-
-.dashboard.dark-mode{
-  background-color: var(--BG-DarkM);
-}
-
-.top{
-  width: 100%;
-  padding: 40px 0px;
-  position: relative;
-  height: 250px;
-  position: relative;
-}
-
-.background-top.dark-mode{
-  background-color: var(--Top-BG-Pattern-DarkM);
-}
-
-div.top > h1{
-  font-size: 25px;
-}
-div.top.dark-mode > h1{
-  color: var(--Other-Text-DarkM);
-}
-div.top > h4{
-margin-top: 6px;
-font-size: 14px;
-color: var(--Text-LightM);
-}
-
-div.top.dark-mode > h4{
-color: var(--Text-DarkM);
-}
-
-.bottom{
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  top: -80px;
-}
-
-.theme{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 88%;
-  padding-top: 20px;
-  border-top: 1px solid black;
-  position: absolute;
-  top: 120px;
-}
-.theme.dark-mode{
-  border-top: 1px solid var(--Text-DarkM);
-
-}
-.theme > h4{
-  color: var(--Text-LightM);
-}
-
-.theme.dark-mode > h4{
-  color: var(--Text-DarkM);
-}
-
-#root > div > div.bottom > div.followers{
-width: 88%;
-}
-#root > div > div.bottom > div.followers > div.card-followers{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: 
-  linear-gradient(var(--Card-BG-LightM),var(--Card-BG-LightM)) padding-box, 
-  linear-gradient(var(--Facebook),var(--Facebook)) border-box;
-  border-top: 4px solid transparent;
-  border-radius: 5px;
-  padding: 24px;
-  margin-top: 36px;
-  margin-bottom: 24px;
-}
-
-#root > div > div.bottom > div.followers > div.card-followers.dark-mode{
-  background: 
-  linear-gradient(var(--Card-BG-DarkM),var(--Card-BG-DarkM)) padding-box, 
-  linear-gradient(var(--Facebook),var(--Facebook)) border-box;
-}
-
-#root > div > div.bottom > div.followers > div.card-followers.instagram{
-  background: 
-  linear-gradient(var(--Card-BG-LightM),var(--Card-BG-LightM)) padding-box, 
-  linear-gradient(to right, var(--Instagram)) border-box;
-}
-
-#root > div > div.bottom > div.followers > div.card-followers.instagram.dark-mode{
-  background: 
-  linear-gradient(var(--Card-BG-DarkM),var(--Card-BG-DarkM)) padding-box, 
-  linear-gradient(to right, var(--Instagram)) border-box;
-}
-
-#root > div > div.bottom > div.followers > div.card-followers.twitter{
-  background: 
-  linear-gradient(var(--Card-BG-LightM),var(--Card-BG-LightM)) padding-box, 
-  linear-gradient(var(--Twitter),var(--Twitter)) border-box;
-}
-#root > div > div.bottom > div.followers > div.card-followers.twitter.dark-mode{
-  background: 
-  linear-gradient(var(--Card-BG-DarkM),var(--Card-BG-DarkM)) padding-box, 
-  linear-gradient(var(--Twitter),var(--Twitter)) border-box;
-}
-#root > div > div.bottom > div.followers > div.card-followers.youtube{
-  background: 
-  linear-gradient(var(--Card-BG-LightM),var(--Card-BG-LightM)) padding-box, 
-  linear-gradient(var(--YouTube),var(--YouTube)) border-box;
-}
-#root > div > div.bottom > div.followers > div.card-followers.youtube.dark-mode{
-  background: 
-  linear-gradient(var(--Card-BG-DarkM),var(--Card-BG-DarkM)) padding-box, 
-  linear-gradient(var(--YouTube),var(--YouTube)) border-box;
-}
-.background-top{
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  background-color: var(--Top-BG-Pattern-LightM);
-  width: 100%;
-  padding: 40px 20px;
-  position: relative;
-  height: 250px;
-  border-radius: 0 0 20px 20px;
-  position: relative;
-}
-.user{
-  display: flex;
-  align-items: center;
-}
-
-.user img{
-  width: 20px;
-}
-.user h3{
-  margin-left: 8px;
-  font-size: 12px;
-  color: var(--Text-LightM);
-}
-.user.dark-mode h3{
-  color: var(--Text-DarkM);
-}
-.card-followers h1{
-  font-size: 50px;
-  margin-top: 20px;
-}
-
-.card-followers.dark-mode h1{
-color: var(--Other-Text-DarkM);
-}
-
-.card-followers h2{
-  font-size: 12px;
-  margin-top: 2px;
-  font-weight: 300;
-  color: var(--Text-LightM);
-  letter-spacing: 5px;
-}
-.card-followers.dark-mode h2{
-  color: var(--Text-DarkM);
-
-}
-
-.new-followers{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-top: 22px;
-}
-
-.new-followers h4{
-  font-size: 12px;
-  margin-left: 4px;
-  color: var(--Lime-Green);
-}
-
-.new-followers.down  h4{
-  color: var(--Bright-Red);
-}
-.overview{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-  width: 88%;
-}
-.title-overview{
-  display: flex;
-  align-items: flex-start;
-  width: 88%;
-}
-.title-overview > h2{
-  font-size: 27px;
-  color: var(--Text-LightM);
-  margin-bottom: 30px;
-}
-.title-overview.dark-mode > h2{
-  color: var(--Other-Text-DarkM);
-}
-
-.statcard{
-  width: 100%;
-  flex-direction: column;
-  padding: 26px 24px;
-  background-color: var(--Card-BG-LightM);
-  border-radius: 4px;
-  margin-bottom: 18px;
-}
-
-.statcard.dark-mode{
-  background-color: var(--Card-BG-DarkM);
-
-}
-
-.top-card,.bottom-card{
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-.top-card h3{
+  --Lime-Green: hsl(163, 72%, 41%);
+  --Bright-Red: hsl(356, 69%, 56%);
+  
+  --Facebook: hsl(208, 92%, 53%);
+  --Twitter: hsl(203, 89%, 53%);
+  --Instagram:hsl(37, 97%, 70%),hsl(329, 70%, 58%);
+  --YouTube: hsl(348, 97%, 39%);
+  
+  --Toggle-Dark:hsl(210, 78%, 56%),hsl(146, 68%, 55%);
+  --Toggle: hsl(230, 22%, 74%);
+  
+  --BG-DarkM: hsl(230, 17%, 14%);
+  --Top-BG-Pattern-DarkM: hsl(232, 19%, 15%);
+  --Card-BG-DarkM: hsl(228, 28%, 20%);
+  --Text-DarkM: hsl(228, 34%, 66%);
+  --Other-Text-DarkM: hsl(0, 0%, 100%);
+  
+  --BG-LightM: hsl(0, 0%, 100%);
+  --Top-BG-Pattern-LightM: hsl(225, 100%, 98%);
+  --Card-BG-LightM: hsl(227, 47%, 96%);
+  --Text-LightM: hsl(228, 12%, 44%);
+  --Other-Text-LightM: hsl(230, 17%, 14%);
+  }
+  
+  .attribution { font-size: 11px; text-align: center; }
+  .attribution.dark-mode{color: var(--Text-DarkM);}
+  .attribution a { color: hsl(228, 45%, 44%); text-decoration: none;}
+  .attribution.dark-mode a{ color: var(--Other-Text-DarkM);}
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+  }
+  /* The switch - the box around the slider */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--Toggle);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:hover{
+    background-image: linear-gradient(52deg,var(--Toggle-Dark));
+  
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    right: 5px;
+    bottom: 3px;
+    background-color: var(--Top-BG-Pattern-LightM);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider.round.dark-mode:before{
+    background-color: var(--Top-BG-Pattern-DarkM);
+  }
+  
+  input:checked + .slider {
+    background-image: linear-gradient(52deg,var(--Toggle-Dark));
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(-24px);
+    -ms-transform: translateX(-24px);
+    transform: translateX(-24px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  .dashboard{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--BG-LightM);
+    position: relative;
+  }
+  
+  .dashboard.dark-mode{
+    background-color: var(--BG-DarkM);
+  }
+  
+  .top{
+    width: 100%;
+    padding: 40px 0px;
+    position: relative;
+    height: 250px;
+    position: relative;
+  }
+  
+  .background-top.dark-mode{
+    background-color: var(--Top-BG-Pattern-DarkM);
+  }
+  
+  div.top > h1{
+    font-size: 25px;
+  }
+  div.top.dark-mode > h1{
+    color: var(--Other-Text-DarkM);
+  }
+  div.top > h4{
+  margin-top: 6px;
   font-size: 14px;
   color: var(--Text-LightM);
-}
-.top-card.dark-mode h3{
+  }
+  
+  div.top.dark-mode > h4{
   color: var(--Text-DarkM);
-
-}
-.bottom-card h2{
-  font-size: 30px;
-  margin-top: 26px;
-}
-
-.bottom-card.dark-mode h2{
-  color: var(--Other-Text-DarkM);
-}
-
-@media (min-width: 850px) {
-   .dashboard{
-     width: 100%;
-   }
-   .background-top{
+  }
+  
+  .bottom{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: -80px;
+  }
+  
+  .theme{
+    display: flex;
     flex-direction: row;
-    padding:20px 80px;
-    height: 160px;
+    justify-content: space-between;
+    width: 88%;
+    padding-top: 20px;
+    border-top: 1px solid black;
+    position: absolute;
+    top: 120px;
+  }
+  .theme.dark-mode{
+    border-top: 1px solid var(--Text-DarkM);
+  
+  }
+  .theme > h4{
+    color: var(--Text-LightM);
+  }
+  
+  .theme.dark-mode > h4{
+    color: var(--Text-DarkM);
+  }
+  
+  #root > div > div.bottom > div.followers{
+  width: 88%;
+  }
+  #root > div > div.bottom > div.followers > div.card-followers{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: 
+    linear-gradient(var(--Card-BG-LightM),var(--Card-BG-LightM)) padding-box, 
+    linear-gradient(var(--Facebook),var(--Facebook)) border-box;
+    border-top: 4px solid transparent;
+    border-radius: 5px;
+    padding: 24px;
+    margin-top: 36px;
+    margin-bottom: 24px;
+  }
+  
+  #root > div > div.bottom > div.followers > div.card-followers.dark-mode{
+    background: 
+    linear-gradient(var(--Card-BG-DarkM),var(--Card-BG-DarkM)) padding-box, 
+    linear-gradient(var(--Facebook),var(--Facebook)) border-box;
+  }
+  
+  #root > div > div.bottom > div.followers > div.card-followers.instagram{
+    background: 
+    linear-gradient(var(--Card-BG-LightM),var(--Card-BG-LightM)) padding-box, 
+    linear-gradient(to right, var(--Instagram)) border-box;
+  }
+  
+  #root > div > div.bottom > div.followers > div.card-followers.instagram.dark-mode{
+    background: 
+    linear-gradient(var(--Card-BG-DarkM),var(--Card-BG-DarkM)) padding-box, 
+    linear-gradient(to right, var(--Instagram)) border-box;
+  }
+  
+  #root > div > div.bottom > div.followers > div.card-followers.twitter{
+    background: 
+    linear-gradient(var(--Card-BG-LightM),var(--Card-BG-LightM)) padding-box, 
+    linear-gradient(var(--Twitter),var(--Twitter)) border-box;
+  }
+  #root > div > div.bottom > div.followers > div.card-followers.twitter.dark-mode{
+    background: 
+    linear-gradient(var(--Card-BG-DarkM),var(--Card-BG-DarkM)) padding-box, 
+    linear-gradient(var(--Twitter),var(--Twitter)) border-box;
+  }
+  #root > div > div.bottom > div.followers > div.card-followers.youtube{
+    background: 
+    linear-gradient(var(--Card-BG-LightM),var(--Card-BG-LightM)) padding-box, 
+    linear-gradient(var(--YouTube),var(--YouTube)) border-box;
+  }
+  #root > div > div.bottom > div.followers > div.card-followers.youtube.dark-mode{
+    background: 
+    linear-gradient(var(--Card-BG-DarkM),var(--Card-BG-DarkM)) padding-box, 
+    linear-gradient(var(--YouTube),var(--YouTube)) border-box;
+  }
+  .background-top{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--Top-BG-Pattern-LightM);
+    width: 100%;
+    padding: 40px 20px;
+    position: relative;
+    height: 250px;
+    border-radius: 0 0 20px 20px;
+    position: relative;
+  }
+  .user{
+    display: flex;
+    align-items: center;
+  }
+  
+  .user img{
+    width: 20px;
+  }
+  .user h3{
+    margin-left: 8px;
+    font-size: 12px;
+    color: var(--Text-LightM);
+  }
+  .user.dark-mode h3{
+    color: var(--Text-DarkM);
+  }
+  .card-followers h1{
+    font-size: 50px;
+    margin-top: 20px;
+  }
+  
+  .card-followers.dark-mode h1{
+  color: var(--Other-Text-DarkM);
+  }
+  
+  .card-followers h2{
+    font-size: 12px;
+    margin-top: 2px;
+    font-weight: 300;
+    color: var(--Text-LightM);
+    letter-spacing: 5px;
+  }
+  .card-followers.dark-mode h2{
+    color: var(--Text-DarkM);
+  
+  }
+  
+  .new-followers{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 22px;
+  }
+  
+  .new-followers h4{
+    font-size: 12px;
+    margin-left: 4px;
+    color: var(--Lime-Green);
+  }
+  
+  .new-followers.down  h4{
+    color: var(--Bright-Red);
+  }
+  .overview{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 88%;
+  }
+  .title-overview{
+    display: flex;
     align-items: flex-start;
-   }
-   .top{
-     height: none;
-     padding: 0;
-   }
-   .theme{
-     position: relative;
-     top: 0;
-     padding-top: 0;
-     border-top: 0;
-     width: 180px;
-     align-items: center;
-   }
-   .theme.dark-mode{
-     border: 0;
-   }
-   .followers{
-     display: grid;
-     grid-template-columns: 1fr 1fr 1fr 1fr;
-     gap: 20px
-   }
-
-
-   .overview{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 20px
-   }
-
-}
+    width: 88%;
+  }
+  .title-overview > h2{
+    font-size: 27px;
+    color: var(--Text-LightM);
+    margin-bottom: 30px;
+  }
+  .title-overview.dark-mode > h2{
+    color: var(--Other-Text-DarkM);
+  }
+  
+  .statcard{
+    width: 100%;
+    flex-direction: column;
+    padding: 26px 24px;
+    background-color: var(--Card-BG-LightM);
+    border-radius: 4px;
+    margin-bottom: 18px;
+  }
+  
+  .statcard.dark-mode{
+    background-color: var(--Card-BG-DarkM);
+  
+  }
+  
+  .top-card,.bottom-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .top-card h3{
+    font-size: 14px;
+    color: var(--Text-LightM);
+  }
+  .top-card.dark-mode h3{
+    color: var(--Text-DarkM);
+  
+  }
+  .bottom-card h2{
+    font-size: 30px;
+    margin-top: 26px;
+  }
+  
+  .bottom-card.dark-mode h2{
+    color: var(--Other-Text-DarkM);
+  }
+  
+  @media (min-width: 850px) {
+     .dashboard{
+       width: 100%;
+     }
+     .background-top{
+      flex-direction: row;
+      padding:20px 80px;
+      height: 160px;
+      align-items: flex-start;
+     }
+     .top{
+       height: none;
+       padding: 0;
+     }
+     .theme{
+       position: relative;
+       top: 0;
+       padding-top: 0;
+       border-top: 0;
+       width: 180px;
+       align-items: center;
+     }
+     .theme.dark-mode{
+       border: 0;
+     }
+     .followers{
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr 1fr;
+       gap: 20px
+     }
+  
+  
+     .overview{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 20px
+     }
+  
+  }
