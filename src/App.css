@@ -24,8 +24,9 @@
 }
 
 .attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
-
+.attribution.dark-mode{color: var(--Text-DarkM);}
+.attribution a { color: hsl(228, 45%, 44%); text-decoration: none;}
+.attribution.dark-mode a{ color: var(--Other-Text-DarkM);}
 *{
   box-sizing: border-box;
   margin: 0;
@@ -109,6 +110,7 @@ input:checked + .slider:before {
 }
 
 .dashboard{
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
