@@ -9,21 +9,23 @@ export default function Dashboard (){
 
     return(
     <div className={'dashboard '+theme}>
-
-        <div className={"top "+theme}>
-            <h1>Social Media Dashboard</h1>
-            <h4>Total Followers: 23.004</h4>
-        </div>
-
-        <div className={"bottom "+theme}>
+        <div className={"background-top "+theme}>
+            <div className={"top "+theme}>
+                <h1>Social Media Dashboard</h1>
+                <h4>Total Followers: 23.004</h4>
+            </div>
 
             <div className={"theme "+theme}>
-                <h4>Dark Mode</h4>
-                <label className={"switch "+theme}>
-                <input type="checkbox" onClick={()=>setdarkMode(!darkMode)}></input>
-                <span className={"slider round "+theme}></span>
-                </label>
+                    <h4>Dark Mode</h4>
+                    <label className={"switch "+theme}>
+                    <input type="checkbox" onClick={()=>setdarkMode(!darkMode)}></input>
+                    <span className={"slider round "+theme}></span>
+                    </label>
             </div>
+        </div>
+        <div className={"bottom "+theme}>
+
+
 
             <div className={"followers "+theme}>
 
@@ -60,12 +62,12 @@ export default function Dashboard (){
                 />
 
             </div>
-
-            <div className={"overview "+theme}>
-
-                <div className={"title-overview "+theme}>
+            <div className={"title-overview "+theme}>
                     <h2>Overview - Today</h2>
                 </div>
+            <div className={"overview "+theme}>
+
+
 
                 <StatCard
                 Theme={theme}
