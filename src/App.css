@@ -113,7 +113,7 @@ input:checked + .slider:before {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   background-color: var(--BG-LightM);
   position: relative;
@@ -125,7 +125,7 @@ input:checked + .slider:before {
 
 .top{
   width: 100%;
-  padding: 40px 20px;
+  padding: 40px 0px;
   position: relative;
   height: 250px;
   position: relative;
@@ -363,7 +363,7 @@ color: var(--Other-Text-DarkM);
   color: var(--Other-Text-DarkM);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 850px) {
    .dashboard{
      width: 100%;
    }
