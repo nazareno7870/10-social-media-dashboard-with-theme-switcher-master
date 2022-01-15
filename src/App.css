@@ -81,6 +81,10 @@ body{
   transition: .4s;
 }
 
+.slider.round.dark-mode:before{
+  background-color: var(--Top-BG-Pattern-DarkM);
+}
+
 input:checked + .slider {
   background-image: linear-gradient(52deg,var(--Toggle-Dark));
 }
@@ -112,6 +116,10 @@ input:checked + .slider:before {
   background-color: var(--BG-LightM);
 }
 
+.dashboard.dark-mode{
+  background-color: var(--BG-DarkM);
+}
+
 .top{
   background-color: var(--Top-BG-Pattern-LightM);
   width: 100%;
@@ -120,13 +128,26 @@ input:checked + .slider:before {
   height: 220px;
   border-radius: 0 0 20px 20px;
 }
+
+.top.dark-mode{
+  background-color: var(--Top-BG-Pattern-DarkM);
+}
+
 #root > div.dashboard > div.top > h1{
   font-size: 25px;
 }
+#root > div > div.top.dark-mode > h1{
+  color: var(--Other-Text-DarkM);
+}
+
 #root > div.dashboard > div.top > h4{
 margin-top: 6px;
 font-size: 14px;
 color: var(--Text-LightM);
+}
+
+#root > div > div.top.dark-mode > h4{
+color: var(--Text-DarkM);
 }
 
 .bottom{
@@ -145,9 +166,16 @@ color: var(--Text-LightM);
   padding-top: 20px;
   border-top: 1px solid black;
 }
+#root > div > div.bottom.dark-mode > div.theme.dark-mode{
+  border-top: 1px solid var(--Text-DarkM);
 
+}
 #root > div > div.bottom > div.theme > h4{
   color: var(--Text-LightM);
+}
+
+#root > div > div.bottom.dark-mode > div.theme.dark-mode > h4{
+  color: var(--Text-DarkM);
 }
 
 #root > div > div.bottom > div.followers{
@@ -168,9 +196,21 @@ width: 88%;
   margin-bottom: 24px;
 }
 
+#root > div > div.bottom > div.followers > div.card-followers.dark-mode{
+  background: 
+  linear-gradient(var(--Card-BG-DarkM),var(--Card-BG-DarkM)) padding-box, 
+  linear-gradient(var(--Facebook),var(--Facebook)) border-box;
+}
+
 #root > div > div.bottom > div.followers > div.card-followers.instagram{
   background: 
   linear-gradient(var(--Card-BG-LightM),var(--Card-BG-LightM)) padding-box, 
+  linear-gradient(to right, var(--Instagram)) border-box;
+}
+
+#root > div > div.bottom > div.followers > div.card-followers.instagram.dark-mode{
+  background: 
+  linear-gradient(var(--Card-BG-DarkM),var(--Card-BG-DarkM)) padding-box, 
   linear-gradient(to right, var(--Instagram)) border-box;
 }
 
@@ -179,10 +219,19 @@ width: 88%;
   linear-gradient(var(--Card-BG-LightM),var(--Card-BG-LightM)) padding-box, 
   linear-gradient(var(--Twitter),var(--Twitter)) border-box;
 }
-
+#root > div > div.bottom > div.followers > div.card-followers.twitter.dark-mode{
+  background: 
+  linear-gradient(var(--Card-BG-DarkM),var(--Card-BG-DarkM)) padding-box, 
+  linear-gradient(var(--Twitter),var(--Twitter)) border-box;
+}
 #root > div > div.bottom > div.followers > div.card-followers.youtube{
   background: 
   linear-gradient(var(--Card-BG-LightM),var(--Card-BG-LightM)) padding-box, 
+  linear-gradient(var(--YouTube),var(--YouTube)) border-box;
+}
+#root > div > div.bottom > div.followers > div.card-followers.youtube.dark-mode{
+  background: 
+  linear-gradient(var(--Card-BG-DarkM),var(--Card-BG-DarkM)) padding-box, 
   linear-gradient(var(--YouTube),var(--YouTube)) border-box;
 }
 
@@ -190,6 +239,7 @@ width: 88%;
   display: flex;
   align-items: center;
 }
+
 .user img{
   width: 20px;
 }
@@ -198,16 +248,28 @@ width: 88%;
   font-size: 12px;
   color: var(--Text-LightM);
 }
+.user.dark-mode h3{
+  color: var(--Text-DarkM);
+}
 .card-followers h1{
   font-size: 50px;
   margin-top: 20px;
 }
+
+.card-followers.dark-mode h1{
+color: var(--Other-Text-DarkM);
+}
+
 .card-followers h2{
   font-size: 12px;
   margin-top: 2px;
   font-weight: 300;
   color: var(--Text-LightM);
   letter-spacing: 5px;
+}
+.card-followers.dark-mode h2{
+  color: var(--Text-DarkM);
+
 }
 
 .new-followers{
@@ -226,4 +288,59 @@ width: 88%;
 
 .new-followers.down  h4{
   color: var(--Bright-Red);
+}
+#root > div > div.bottom > div.overview{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  width: 88%;
+}
+#root > div > div.bottom > div.overview > div.title-overview{
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+#root > div > div.bottom > div.overview > div.title-overview > h2{
+  font-size: 27px;
+  color: var(--Text-LightM);
+  margin-bottom: 30px;
+}
+#root > div > div.bottom > div.overview > div.title-overview.dark-mode > h2{
+  color: var(--Other-Text-DarkM);
+}
+
+.statcard{
+  width: 100%;
+  flex-direction: column;
+  padding: 26px 24px;
+  background-color: var(--Card-BG-LightM);
+  border-radius: 4px;
+  margin-bottom: 18px;
+}
+
+.statcard.dark-mode{
+  background-color: var(--Card-BG-DarkM);
+
+}
+
+.top-card,.bottom-card{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.top-card h3{
+  font-size: 14px;
+  color: var(--Text-LightM);
+}
+.top-card.dark-mode h3{
+  color: var(--Text-DarkM);
+
+}
+.bottom-card h2{
+  font-size: 30px;
+  margin-top: 26px;
+}
+.bottom-card.dark-mode h2{
+  color: var(--Other-Text-DarkM);
 }
